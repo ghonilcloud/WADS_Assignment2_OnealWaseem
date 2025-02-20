@@ -1,0 +1,234 @@
+/* Basic CSS for styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.html-indiv, .body-indiv {
+    height: 100%; /* Ensure the body takes up the full height of the viewport */
+    margin: 0; /* Remove default margin */
+}
+
+h4 {
+    font-style: italic;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: sticky; /* Make it stick to the top */
+    top: 0; /* Stick to the top */
+    z-index: 100; /* Ensure it stays on top of other content */
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.navbar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ddd;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.member-image {
+    flex: 0 0 30%; /* 30% width */
+    padding: 10px;
+    text-align: center;
+    cursor: pointer; /* Change cursor to pointer */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+}
+
+.scale-up {
+    transform: scale(1.05); /* Scale up the card */
+}
+
+.member-image-indiv {
+    flex: 0 0 30%; /* 30% width */
+    padding: 10px;
+    text-align: center;
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.member-image a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
+}
+
+.member-image img {
+    width: 100%; /* Make the image fill the width of the container */
+    height: 500px; /* Set a fixed height for all images */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.member-image-indiv img {
+    width: 100%; /* Make the image fill the width of the container */
+    height: 500px; /* Set a fixed height for all images */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-main-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column; /* Change to column to stack items vertically */
+    align-items: center; /* Center items horizontally */
+    flex-grow: 1; /* Allow this section to grow and take up available space */
+}
+
+.main-content {
+    width: 100%; /* Set width to 100% of the container */
+    max-width: 800px; /* Set a max-width for the main content */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space between content and details */
+}
+
+.member-info {
+    flex: 1; /* 70% width */
+    display: flex;
+    flex-direction: column; /* Stack content and details vertically */
+    padding: 0; /* Remove padding to align with member-image */
+    justify-content: flex-start; /* Align items to the start */
+}
+
+.member-content {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space between content and details */
+}
+
+.member-quote {
+    padding: 20px;
+    background-color: #e9ecef; /* Light background for distinction */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+@media (max-width: 600px) {
+    .navbar li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .container {
+        flex-direction: column; /* Stack vertically on small screens */
+    }
+
+    .member-image, .member-info {
+        flex: 1; /* Full width on small screens */
+        text-align: center; /* Center text on small screens */
+    }
+}
+
+/* Add this to your existing styles.css */
+.fade-in {
+    opacity: 0; /* Start with an opacity of 0 */
+    transition: opacity 1s ease-in-out; /* Transition effect for opacity */
+}
+
+.fade-in.visible {
+    opacity: 1; /* Set opacity to 1 when visible */
+}
+
+.rating {
+    display: flex;
+    cursor: pointer; /* Change cursor to pointer */
+    justify-content: center;
+}
+
+.rating-indiv {
+    display: flex;
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.star {
+    font-size: 24px; /* Size of the stars */
+    color: gray; /* Default color */
+    transition: color 0.2s; /* Smooth color transition */
+}
+
+.star:hover, .star.selected {
+    color: gold; /* Color when hovered or selected */
+}
+
+/* Pink Mode Styles */
+.pink-mode {
+    background-color: #ffccff; /* Light pink background */
+    color: #330033; /* Darker text color for contrast */
+}
+
+.pink-mode .navbar {
+    background-color: #ff66b2; /* Pink navbar */
+}
+
+.pink-mode .navbar a {
+    color: white; /* White text for navbar links */
+}
+
+.pink-mode footer {
+    background-color: #ff66b2; /* Pink footer */
+    color: white; /* White text for footer */
+}
+
+.pink-mode .member-image img {
+    border: 2px solid #ff66b2; /* Pink border for member images */
+    transition: border-color 0.5s ease;
+}
